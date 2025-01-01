@@ -1,0 +1,29 @@
+<div class="container">
+    <div [routerLink]="['/home']">{{ 'accueil' | translate }}</div>
+    <div
+     [routerLink]="['/cattery']"
+     (mouseover)="changeCategHover('cattery')">
+        {{ 'chatterie' | translate }}
+        <div>
+            <div>{{ 'histoire' | translate }}</div>
+            <div>{{ 'philo' | translate }}</div>
+            <div>{{ 'place' | translate }}</div>
+            <div>{{ 'alim' | translate }}</div>
+            <div>{{ 'sante' | translate }}</div>
+            <div>{{ 'repro' | translate }}</div>
+        </div>
+    </div>
+    <div 
+    [routerLink]="['/maine']"
+    (mouseover)="changeCategHover('maine')"
+    >
+        {{ 'maine' | translate }}
+        <div *ngIf="categHover === 'maine'">
+            <div>{{ 'general' | translate }}</div>
+            <div>{{ 'uzi' | translate }}</div>
+            <div>{{ 'mariages' | translate }}</div>
+            <div>{{ 'vente' | translate }}</div>
+        </div>
+    </div>
+    <div [routerLink]="['/contact']">{{ 'contact' | translate }}</div>
+</div>
