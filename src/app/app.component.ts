@@ -7,14 +7,9 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   title = 'ng-coon-castle';
-
-  constructor(private translate: TranslateService) {
-    translate.setDefaultLang('fr');
-    translate.use('fr');
-  }
-
-  switchLanguage(language: string) {
-    this.translate.use(language);
+  constructor() {
+    
   }
 }

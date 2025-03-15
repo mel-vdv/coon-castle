@@ -1,0 +1,13 @@
+.container {
+    width: 100%;
+    background-color: rgb(247, 239, 239);
+}
+.health {
+    width: min(100vw, 1200px);
+    box-sizing: border-box;
+    margin: auto;
+    padding: 20px;
+}
+.rose {
+    background-color: pink;
+}

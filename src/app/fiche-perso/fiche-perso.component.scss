@@ -1,0 +1,150 @@
+.container {
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+}
+.fiche {
+    width: min(100vw, 1200px);
+    margin: 0 auto;
+    display: flex;
+
+    .images {
+        width: 50%;
+        height: fit-content;
+        .nom {
+            margin: 10px 0;
+            height: 100px;
+            padding-top: 25px;
+            background-image: url(/assets/images/ecriteau-long.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            span{
+                font-weight: bolder;
+                line-height: 45px;
+                font-size: 30px;
+            }
+        }
+        .main {
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        .carroussel {
+            background-color: pink;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            img[alt='chevron-g'], img[alt='chevron-d']{
+                width: 2.5%;
+                margin: 2.5%;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+            img[alt='chevron-d']{
+                transform: scaleX(-1) !important;
+            }
+            
+            .miniatures {
+                margin-top: 20px;
+                width: 90%;
+                display: block;
+                overflow: hidden;
+
+                .barre-defile {
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    height: 200px;
+                    width: auto;
+                    align-items: center;
+                    overflow: visible;
+
+                    .mini {
+                        position: relative;
+                        height: 200px;
+                        overflow: hidden;
+
+                        img[alt='mini'] {
+                            height: 200px;
+                            object-fit: contain;
+                            max-width: 100%;
+                        }
+
+                        img[alt="agrandir"] {
+                            height: 50px;
+                            width: auto;
+                            position: absolute;
+                            top: calc(50% - 25px);
+                            left: calc(50% - 25px);
+                            animation: zoom 1s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    /*///////////////////*/
+    .infos {
+    font-size: 22px;
+    width: 50%;
+    height: 400px;
+    padding-left: 50px;
+        .perso{}
+        .blabla{}
+        .concours{}
+        .dispo{}
+        .parents {
+            img[alt='parent']{
+                height: 150px;
+                &:hover {
+                    transform: scale(1.01);
+                }
+            }
+            .peremere {
+                display: flex;
+                & > div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 20px;
+                }
+            }
+        }
+
+}
+}
+/****************************/
+span {
+    font-weight: bold;
+}
+h2 {
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+li {
+    margin: 8px 0;
+}
+em {
+    all: unset;
+}
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.3);
+    }
+}

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PhilosophyComponent } from './philosophy.component';
+import { ZoomComponent } from './zoom.component';
 
-describe('PhilosophyComponent', () => {
-  let component: PhilosophyComponent;
-  let fixture: ComponentFixture<PhilosophyComponent>;
+describe('ZoomComponent', () => {
+  let component: ZoomComponent;
+  let fixture: ComponentFixture<ZoomComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PhilosophyComponent ]
+      declarations: [ ZoomComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PhilosophyComponent);
+    fixture = TestBed.createComponent(ZoomComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

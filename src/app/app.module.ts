@@ -18,7 +18,6 @@ import { UziComponent } from './uzi/uzi.component';
 import { WeddingsComponent } from './weddings/weddings.component';
 import { SellingComponent } from './selling/selling.component';
 import { HistoryComponent } from './history/history.component';
-import { PhilosophyComponent } from './philosophy/philosophy.component';
 import { AlimentationComponent } from './alimentation/alimentation.component';
 import { HealthComponent } from './health/health.component';
 import { ReproductionComponent } from './reproduction/reproduction.component';
@@ -34,6 +33,21 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/trad/', '.json');
 }
+
+//firebase
+import { AngularFireStorageModule} from '@angular/fire/compat/storage';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ChatonsDispoComponent } from './chatons-dispo/chatons-dispo.component';
+import { FichePersoComponent } from './fiche-perso/fiche-perso.component';
+import { TitlecasePipe } from './pipes/titlecase.pipe';
+import { PoidsPipe } from './pipes/poids.pipe';
+import { ZoomComponent } from './zoom/zoom.component';
+import { PhiloComponent } from './philo/philo.component';
+import { ChronologieComponent } from './chronologie/chronologie.component';
 
 @NgModule({
   declarations: [
@@ -53,13 +67,19 @@ export function HttpLoaderFactory(http: HttpClient) {
     WeddingsComponent,
     SellingComponent,
     HistoryComponent,
-    PhilosophyComponent,
     AlimentationComponent,
     HealthComponent,
     ReproductionComponent,
     PlaceComponent,
     NavigComponent,
-    PubComponent
+    PubComponent,
+    ChatonsDispoComponent,
+    FichePersoComponent,
+    TitlecasePipe,
+    PoidsPipe,
+    ZoomComponent,
+    PhiloComponent,
+    ChronologieComponent
   ],
   imports: [
     BrowserModule,
@@ -71,9 +91,16 @@ export function HttpLoaderFactory(http: HttpClient) {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+         
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideDatabase(() => getDatabase()),
+    AngularFireStorageModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    { provide: FIREBASE_OPTIONS, useValue: environment.firebase }////////////////////////on ajoute pour éviter une error
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

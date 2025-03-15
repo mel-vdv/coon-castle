@@ -1,0 +1,8 @@
+<svg width="150" height="100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Rectangle bleu -->
+  <rect x="0" y="0" width="50" height="100" fill="#29518C" />
+  <!-- Rectangle blanc -->
+  <rect x="50" y="0" width="50" height="100" fill="white" />
+  <!-- Rectangle rouge -->
+  <rect x="100" y="0" width="50" height="100" fill="rgb(147,60,60)" />
+</svg>

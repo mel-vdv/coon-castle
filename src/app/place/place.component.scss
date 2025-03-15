@@ -1,0 +1,10 @@
+.container {
+    width: 100%;
+    background-color: rgb(247, 239, 239);
+}
+.place {
+    width: min(100vw, 1200px);
+    margin: auto;
+    box-sizing: border-box;
+    padding: 20px;
+}

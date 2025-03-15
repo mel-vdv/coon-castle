@@ -1,1 +1,21 @@
-<p>weddings works!</p>
+<div class="container">
+    <div class="weddings">
+        <h1>{{ 'mariages-prevus' | translate}}</h1>
+        <img src="assets/images/bagues.png" alt="bagues">
+        <div class="cadres">
+            <div class="cadre" *ngFor="let x of [femelle, male]">
+                <div class="ecriteau">
+                    <div> <span>{{x.nom | uppercase}}</span></div>
+                    <div>{{ 'of' | translate }} {{x.cattery | titlecase}}</div>
+                </div>
+                <img [src]="'assets/images/chats/cadre-' + x.nom + '.png'" alt="cadre">
+                <div class="recap">
+                    <p>{{ 'ne-le-' + x.sexe | translate }} {{x.anniv}}</p>
+                    <p>{{ x.sexe | translate }} {{x.robe}}</p>
+                    <p>{{ 'titres' | translate }}: {{x.concours}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="infos"></div>
+    </div>
+</div>

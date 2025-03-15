@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { listeChats } from '../constantes/liste-chats';
+import { Chat } from '../chat';
 
 @Component({
   selector: 'app-weddings',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WeddingsComponent implements OnInit {
 
-  constructor() { }
+  femelle!:Chat;
+  male!:Chat;
+
+  constructor() { 
+  }
 
   ngOnInit(): void {
+    this.femelle = listeChats.find( (c: Chat) => c.nom === "udaipur")!;
+    this.male = listeChats.find( (c: Chat) => c.nom === "uragon")!;
   }
+
 
 }
