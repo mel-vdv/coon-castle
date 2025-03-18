@@ -37,7 +37,8 @@
                 div:nth-child(4) {
                     font-size: 16px;
                     @media screen and (max-width:700px) {
-                        font-size: 14px;
+                        padding: 0;
+                        font-size: 12px;
                     }
                 }
                 &:nth-child(-n+2){
@@ -83,7 +84,7 @@
                 height: 76px;
                 position: relative;
                 top: 59px;
-                right: 5px;
+                right: 7px;
                 transform: scaleX(-1);
                 @media screen and (max-width:700px) {
                     top: 99px;

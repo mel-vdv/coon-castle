@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { listeChats } from '../constantes/liste-chats';
 import { Chat } from '../chat';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-weddings',
@@ -12,7 +13,9 @@ export class WeddingsComponent implements OnInit {
   femelle!:Chat;
   male!:Chat;
 
-  constructor() { 
+  constructor(
+    private router: Router
+  ) { 
   }
 
   ngOnInit(): void {
@@ -20,5 +23,7 @@ export class WeddingsComponent implements OnInit {
     this.male = listeChats.find( (c: Chat) => c.nom === "uragon")!;
   }
 
-
+  navigate(nom: string) {
+    this.router.navigate([`/chat/${nom}`]);
+  }
 }

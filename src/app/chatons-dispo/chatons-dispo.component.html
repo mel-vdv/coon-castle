@@ -69,7 +69,8 @@
             <div *ngFor="let chaton of chatons">
                 <div class="name">{{chaton.nom}}</div>
                 <div class="container-photo">
-                    <img [src]="'assets/images/chats/cadre-' + chaton.nom + '.png'" alt="photo"  (click)="navigate(chaton.nom)">
+                    <img src="assets/images/cadre-sticker.png" alt="cadre">
+                    <img [src]="'assets/images/chats/' + chaton.nom + '/' + chaton.nom + '-main.png'" alt="photo-chat"  (click)="navigate(chaton.nom)">
                 </div>
                 <img [src]="'assets/images/tampon-' + chaton.statut + '.png'" alt="tampon">
                 <div class="sexe">{{ chaton.sexe | translate }}</div>

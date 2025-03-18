@@ -1,18 +1,27 @@
 <div class="container">
     <div class="weddings">
-        <h1>{{ 'mariages-prevus' | translate}}</h1>
+        <h1>
+            <img src="assets/images/filigrane-g.png" alt="filigrane"> 
+            {{ "mariages-prevus" | translate }}
+            <img src="assets/images/filigrane-d.png" alt="filigrane">
+        </h1>
         <img src="assets/images/bagues.png" alt="bagues">
         <div class="cadres">
             <div class="cadre" *ngFor="let x of [femelle, male]">
                 <div class="ecriteau">
-                    <div> <span>{{x.nom | uppercase}}</span></div>
-                    <div>{{ 'of' | translate }} {{x.cattery | titlecase}}</div>
+                    <span>{{x.nom | uppercase}}</span>{{ 'of' | translate }} {{x.cattery | titlecase}}
                 </div>
-                <img [src]="'assets/images/chats/cadre-' + x.nom + '.png'" alt="cadre">
+                <div class="container-photo">
+                    <img src="assets/images/cadre-sticker.png" alt="cadre">
+                    <img [src]="'assets/images/chats/' + x.nom + '/' + x.nom + '-main.png'" alt="photo-chat"  (click)="navigate(x.nom)">
+                </div>
+                <div class="voir-details">
+                    <button (click)="navigate(x.nom)">{{"voir-details" | translate}}</button>
+                </div>
                 <div class="recap">
                     <p>{{ 'ne-le-' + x.sexe | translate }} {{x.anniv}}</p>
                     <p>{{ x.sexe | translate }} {{x.robe}}</p>
-                    <p>{{ 'titres' | translate }}: {{x.concours}}</p>
+                    <p>{{x.concours}}</p>
                 </div>
             </div>
         </div>

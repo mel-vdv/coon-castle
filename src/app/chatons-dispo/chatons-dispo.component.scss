@@ -1,12 +1,14 @@
 .container {
     width: 100%;
-    background-color: #363333;
+    background-image: url(/assets/images/fonds/fond-noir-texturé.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
     font-size: 18px;
     line-height: 30px;
 
     .chatons {
-        width: min(100vw, 1200px);
+        width: min(100vw, 1400px);
         margin: auto;
         box-sizing: border-box;
         padding: 20px;
@@ -104,6 +106,8 @@
 
             @media screen and (max-width:700px) {
                 flex-direction: column;
+                width: 100vw;
+                margin-left:  -20px;
                 .sexes, .etats {
                     width: 100%;
                     > div {
@@ -126,19 +130,9 @@
             > div {
                 margin: 20px;
                 padding: 20px;
-                background-color: #5a5656;
+                background-color: rgb(207,200,200, 0.3);
+                box-shadow: 0 0 20px rgb(0,0,0);
                 border-radius: 10px;
-            }
-            .sexe {
-                font-weight: bold;
-            }
-            img[alt='tampon'] {
-                height: 80px;
-                transform: translateX(80px);
-            }
-            img[alt="emprunte"] {
-                height: 30px;
-                margin-right: 10px;
             }
             .name {
                 height: 50px;
@@ -156,6 +150,43 @@
                 justify-content: center;
                 margin-bottom: 10px;
             }
+            .container-photo {
+                width: 350px;
+                aspect-ratio: 7.3/10;
+                @media screen and (max-width:700px) {
+                    width: 100%;
+                }
+                overflow: hidden;
+                margin-bottom: -60px;
+                position: relative;
+                display: flex; align-items: center; justify-content: center;
+                img[alt='cadre'] {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                }
+                img[alt='photo-chat']{
+                    height: auto;
+                    width: 85%;
+                    transition: transform 300ms ease-in-out;
+                }
+                &:hover img[alt="photo-chat"] {
+                    transform: scale(1.06);
+                    z-index: 0;
+                }
+            }
+            img[alt='tampon'] {
+                height: 80px;
+                position: relative;
+                left: 40%;
+                z-index: 3;
+            }
+            .sexe {
+                font-weight: bold;
+            }
             button {
                 all: unset;
                 background-color: #a19999;
@@ -170,25 +201,9 @@
                     font-weight: bolder;
                     color: #363333;
                 }
-            }
-            .container-photo {
-                height: 300px;
-                width: 225px;
-                overflow: hidden;
-                margin-bottom: -60px;
-
-                img[alt='photo']{
-                    height: auto;
-                    width: 100%;
-                    transition: transform 300ms ease-in-out;
-                    &:hover {
-                        transform: scale(1.2);
-                    }
-                }
-
-                @media screen and (max-width:700px) {
-                    width: 100%;
-                    height: auto;
+                img[alt="emprunte"] {
+                    height: 30px;
+                    margin-right: 10px;
                 }
             }
         }

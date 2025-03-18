@@ -44,7 +44,7 @@ export const listeChats: Chat[] = [
     {
         nom: "viagra",
         sexe: "m",
-        robe: "Black silver",
+        robe: "Silver shaded",
         statut: "option",
         anniv: "15/05/2023",
         poids: [133,"g",0,"j"],
@@ -97,7 +97,7 @@ export const listeChats: Chat[] = [
         loof: "LOOF 2023 2542",
         blabla: "bon chacha",
         photos: [
-            "uzi-main.jpeg",
+            "uzi-1.jpeg",
             "uzi-2.jpeg",
             "uzi-3.jpeg",
             "uzi-4.jpeg",

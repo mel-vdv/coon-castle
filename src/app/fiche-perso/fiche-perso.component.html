@@ -5,8 +5,9 @@
                 <div> <span>{{nom | uppercase}}</span></div>
                 <div>{{ 'of' | translate }} {{chat.cattery | titlecase}}</div>
             </div>
-            <div class="main">
-                <img [src]="'assets/images/chats/cadre-' + chat.nom + '.png'" alt="main">
+            <div class="container-photo">
+                <img src="assets/images/cadre-sticker.png" alt="cadre">
+                <img [src]="'assets/images/chats/' + chat.nom + '/'+ chat.nom + '-main.png'" alt="photo-chat"/>
             </div>
             <div class="carroussel" *ngIf="chat.photos?.length">
                 {{barreWidth}}
@@ -14,7 +15,7 @@
                 <div class="miniatures">
                     <div class="barre-defile" id="barre" #barre>
                         <div class="mini" (mouseover)="agrandit(i)" *ngFor="let photo of chat.photos; let i = index">
-                            <img [src]="'assets/images/chats/' + photo" alt="mini">
+                            <img [src]="'assets/images/chats/' + chat.nom + '/' + photo" alt="mini">
                             <img src="assets/images/agrandir.svg" alt="agrandir" *ngIf="indexAgrandi === i" (click)="zoomVis = true;">
                         </div>
                     </div>
@@ -25,7 +26,7 @@
         <!--------------------------------------------------------------------------------->
         <div class="infos">
             <div class="perso">
-                <h2>{{"info" | translate }}</h2>
+                <h2 class="h2fiche">{{"info" | translate }}</h2>
                 <p>{{ chat.sexe | translate }} {{ chat.robe}}</p>
                 <ul>
                     <li>
@@ -79,15 +80,15 @@
                         <span>{{ "pere" | translate }}</span>
                         <div>{{ chat.pere | titlecase}}</div>
                         <div class="parent" (click)="navigate(chat.pere)">
-                            <img [src]="'assets/images/chats/cadre-' + chat.pere + '.png'" alt="parent">
+                            <img [src]="'assets/images/chats/' + chat.pere + '/' + chat.pere + '-main.png'" alt="parent">
                         </div>
                     </div>
                     <div *ngIf="!!chat.mere">
                         <span>{{ "mere" | translate }}</span>
                         <div>{{ chat.mere | titlecase}}</div>
                         <div class="parent" (click)="navigate(chat.mere)">
-                            <img [src]="'assets/images/chats/cadre-' + chat.mere + '.png'" alt="parent">
-                        </div>
+                            <img [src]="'assets/images/chats/' + chat.mere + '/' + chat.mere + '-main.png'" alt="parent">
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -96,6 +97,7 @@
 </div>
 <app-zoom
     [photos]="chat!.photos!"
+    [nom]="nom!"
     [index]="indexAgrandi!"
     (close)="closeZoomVis()"
     *ngIf="zoomVis"

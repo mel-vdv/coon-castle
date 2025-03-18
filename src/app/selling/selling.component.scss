@@ -3,6 +3,17 @@
 }
 .selling {
     width: min(100vw, 1200px);
+    box-sizing: border-box;
     margin: auto;
-    padding: 20px 0;
+    padding: 20px;
+
+    .tarifs {
+        ul {
+            border: red 1px dotted;
+            padding: 20px;
+        }
+    }
+    .red {
+        color: red;
+    }
 }

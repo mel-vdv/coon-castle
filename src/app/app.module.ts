@@ -48,6 +48,7 @@ import { PoidsPipe } from './pipes/poids.pipe';
 import { ZoomComponent } from './zoom/zoom.component';
 import { PhiloComponent } from './philo/philo.component';
 import { ChronologieComponent } from './chronologie/chronologie.component';
+import { AdoptantComponent } from './adoptant/adoptant.component';
 
 @NgModule({
   declarations: [
@@ -79,7 +80,8 @@ import { ChronologieComponent } from './chronologie/chronologie.component';
     PoidsPipe,
     ZoomComponent,
     PhiloComponent,
-    ChronologieComponent
+    ChronologieComponent,
+    AdoptantComponent
   ],
   imports: [
     BrowserModule,

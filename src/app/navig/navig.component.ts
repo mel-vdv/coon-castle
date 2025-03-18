@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavigService } from '../navig.service';
 
 @Component({
   selector: 'app-navig',
@@ -11,7 +12,8 @@ export class NavigComponent implements OnInit {
   categHover = "";
 
   constructor(
-    private router: Router
+    private router: Router,
+    private navigServ: NavigService
   ) { }
 
   ngOnInit(): void {
@@ -26,13 +28,6 @@ export class NavigComponent implements OnInit {
   }
 
   naviguer(url:string, fragment: string) {
-    this.router.navigate([`${url}`], { fragment: `${fragment}` }).then(() => {
-      setTimeout(() => {
-        const element = document.getElementById(fragment);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 300);
-    });
+    this.navigServ.naviguer(url, fragment);
   }
 }
