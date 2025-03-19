@@ -45,6 +45,9 @@ h5 + p{
     display: block;
     padding: 10px;
     margin: auto;
+    @media screen and(max-width:700px) {
+        width: 100%;
+    }
 }
 .health {
     width: min(100vw, 1200px);

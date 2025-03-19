@@ -5,29 +5,35 @@
             {{ "vente" | translate }}
             <img src="assets/images/filigrane-d.png" alt="filigrane">
         </h1>
+
+        <div class="destination">
+            <p>Les chatons Maine Coon (mâle comme femelle) de notre élevage sont vendus uniquement en qualité de chat de compagnie. Tous nos chatons sont stérilisés avant de partir chez leurs adoptants respectifs.</p>
+            <p class="red">NOUS NE VENDONS AUCUN CHATON EN QUALITÉ DE REPRODUCTEUR.</p>
+        </div>
+        
         <div class="tarifs">
             <h2>Voici les tarifs <span (click)="naviguer('/cattery','chatons')">des chatons Maine Coon</span> à la vente au sein de notre chatterie :</h2>
             <ul>
                 <li>Tarif chaton Maine Coon mâle : {{tarifM}} € TTC </li>
                 <li>Tarif chaton Maine Coon femelle : {{tarifF}} € TTC </li>
             </ul>
-            <div class="destination">
-                <h3>Destination des chatons Coon Castle</h3>
-                <p>Les chatons Maine Coons (mâle comme femelle) de notre élevage sont vendus uniquement en qualité de chat de compagnie. Tous nos chatons sont stérilisés avant de partir chez leurs adoptants respectifs.</p>
-                <p class="red">NOUS NE VENDONS AUCUN CHATON EN QUALITÉ DE REPRODUCTEUR.</p>
-            </div>
         </div>
         <div class="criteres">
             <div class="intro">
-                Quel est le coût d’un Maine Coon ? Cette question revient fréquemment chez ceux qui souhaitent adopter un chaton de cette race. 
+                Quel est le coût d’un Maine Coon ? 
+                <br><br>
+                Cette question revient fréquemment chez ceux qui souhaitent adopter un chaton de cette race.
+                <br>
                 Cependant, il n’existe pas de réponse unique. 
-                En France, le prix moyen d’un Maine Coon varie généralement entre 1 000 € et 2 500 €. 
-
+                <br>
+                En Belgique, comme en France, le prix moyen d’un Maine Coon varie généralement entre 1 000 € et 2 500 €. 
+                <br><br>
                 Cette large fourchette s’explique par plusieurs facteurs qu’il est important d’examiner en détail.
+                <br>
                 En effet, de nombreux éléments influencent le tarif de ces chats, justifiant ainsi les écarts de prix constatés.
             </div>
             <div class="pedigree">
-                <h2>Généalogie et pédigrée : un facteur clé</h2>
+                <h3>Généalogie et pédigrée : un facteur clé</h3>
                 <p>La généalogie joue un rôle essentiel dans la détermination du prix d’un Maine Coon.
                     Un chat issu d’une lignée prestigieuse, avec une qualité génétique remarquable, aura naturellement une valeur plus élevée qu’un Maine Coon sans pédigrée.
                     Un chaton descendant d’un Grand Champion d’Europe ou d’un Champion du Monde sera proposé à un tarif bien supérieur à celui d’un chat sans distinctions.</p>
@@ -37,7 +43,7 @@
                     Udaipur notre femelle reproductrice est aussi issue d'une lignée très titrée (uzi lien)</p>
             </div>
             <div class="elevage">
-                <h2>Excellence et engagement dans l’élevage</h2>
+                <h3>Excellence et engagement dans l’élevage</h3>
                 <p>L’un des facteurs déterminants dans le prix d’un Maine Coon est la qualité de l’élevage où vous choisissez d’adopter votre chaton. 
                     Certains élevages privilégient une production intensive, visant à maximiser le nombre de portées et les ventes annuelles, au détriment du bien-être des animaux. 
                     Chez Coon Castle, nous adoptons une démarche totalement opposée : 
@@ -54,7 +60,7 @@
             </div>
             <div class="soins">
                 <div class="alim">
-                    <h2>L'alimentation premium</h2>
+                    <h3>Alimentation premium</h3>
                     <div> Concernant la nourriture, chez Coon Castle, nous avons fait le choix d’une alimentation haut de gamme pour nos chats.
                         Les adultes ont de la viande fraiche crue et des croquettes Royal Canin spécial Maine Coon.
                         Les chatons ont la version "Kitten" des croquettes Royal Canin spécial Maine Coon.
@@ -63,25 +69,41 @@
                     </div>
                 </div>
                 <div class="veto">
-                    <h2>Soins vétérinaires</h2>
-                    <div>Les frais de vétérinaire comportent:
+                    <h3>Soins vétérinaires</h3>
+                    <div>
+                        Les frais de vétérinaire comportent, pour chaque chaton:
                         <ul>
-                            <li>les différentes vaccinations contre les maladies les plus courantes (Typhus, Coryza, Leucose, ...)</li>
-                            <li>les échographies et radiographies de contrôle pendant la gestation</li>
-                            <li>les stérilisations</li>
-                            <li>les vermifugations</li>
-                            <li>l'implantation de la puce électronique</li>
+                            <li>Les différentes vaccinations contre les maladies les plus courantes (Typhus, Coryza, Leucose, ...)</li>
+                            <li>les traitements vermifuges et anti-parasitaires</li>
+                            <li>La stérilisation / castration</li>
+                            <li>L'implantation de la puce électronique</li>
                         </ul>
+                        Pour en savoir plus sur la santé : <button (click)="naviguer('/maine','sante')">La santé</button>
+                    </div>
+                </div>
+                <div class="repro">
+                    <h3>Reproduction de qualité</h3>
+                    <div>
+                        Mettre en oeuvre un mariage de qualité a aussi un coût:
+                        <ul>
+                            <li>La saillie, plus onéreuse quand le mâle est titré</li>
+                            <li>Les tests sanguins et ADN</li>
+                            <li>Les examens d'imagerie médicale pendant la gestation</li>
+                            <li>L'alimentation et les soins des nouveaux-nés</li>
+                        </ul>
+                        Pour en savoir plus sur la reproduction : <button (click)="naviguer('/maine','repro')">La reproduction</button>
                     </div>
                 </div>
             </div>
             <div class="age"></div>
             <div class="robe">
-                Certaines robes sont plus populaires que d'autres. 
-                De plus, certaines couleurs sont plus rares, ce qui peut influencer leur valeur sur le marché. 
-                Il n'est donc pas surprenant que certains pelages, voire une nuance très spécifique, soient vendus à un prix plus élevé. 
+                <h3>Robe</h3>
+                <div>
+                Certaines robes sont plus populaires que d'autres. <br>
+                De plus, certaines couleurs sont plus rares, ce qui peut influencer leur valeur sur le marché. <br>
+                Il n'est donc pas surprenant que certains pelages, voire une nuance très spécifique, soient vendus à un prix plus élevé.  <br>
                 Les variations de couleur et de motifs, telles que le silver tabby ou le smoke, sont parfois particulièrement recherchées, ce qui peut en faire des spécimens plus onéreux.
-
+                </div>
             </div>
             <div class="autres"></div>
         </div>
@@ -94,15 +116,16 @@
                 De plus, nous vous enverrons fréquemment des nouvelles et des vidéos, afin de vous faire patienter jusqu’à son arrivée</p>
             <p>Avant de rejoindre son nouveau foyer, votre chaton sera :</p>
             <ul style="list-style: none;">
-                <li>✅ Vacciné contre le typhus, le coryza et la chlamydiose (avec un vaccin trivalent).</li>
-                <li>✅ Vacciné contre la rage, si l’adoptant réside à l’étranger.</li>
-                <li>✅ Vermifugé et déparasité.</li>
-                <li>✅ Identifié par puce électronique "Thermochip", permettant non seulement son identification, mais aussi la lecture de sa température (plus d’infos dans notre article dédié).</li>
-                <li>✅ Stérilisé si c'est une femelle, castré si c'est un mâle.</li>
+                <li>✅ Vacciné contre le typhus, le coryza et la chlamydiose (avec un vaccin trivalent)</li>
+                <li>✅ Vacciné contre la rage, si l’adoptant réside à l’étranger</li>
+                <li>✅ Vermifugé et déparasité</li>
+                <li>✅ Pucé</li>
+                <li>✅ Stérilisé si c'est une femelle, castré si c'est un mâle</li>
             </ul>
             <p>Sa petite valise contiendra également : </p>
             <ul>
-                <li>Son certificat de bonne santé, établi par notre vétérinaire.</li>
+                <li>Son certificat de bonne santé, établi par notre vétérinaire</li>
+                <li>Son carnet de santé, avec les vignettes de ses premiers vaccins</li>
                 <li>Son passeport</li>
                 <li>Son pedigree LOOF</li>
                 <li>Un petit coffret de jeux</li>

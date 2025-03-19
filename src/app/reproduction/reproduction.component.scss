@@ -31,4 +31,47 @@
     h3, h3 + p, h4, h4 + p {
         margin: 10px 30px;
     }
+    h5 {
+        text-decoration: underline;
+    }
+    h5, h5 + p {
+        margin: 10px 60px;
+    }
+    .sexage, .bapteme {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    img[alt='radio'] {
+        max-width: min(100vw, 1200px);
+        display: block;
+        margin-left: -20px;
+    }
+    .pesee {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 100px;
+        img {
+            height: 200px;
+        }
+    }
+    @media screen and (max-width: 700px) {
+        h3 + p, h4, h4 + p, h5, h5 + p {
+            margin: 10px 0;
+        }
+        ul {
+            padding: 10px;
+        }
+        img[alt="sexage"] {
+            width: 100vw;
+        }
+        .sexage {
+            flex-direction: column;
+        }
+        .pesee {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
 }
