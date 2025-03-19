@@ -1,3 +1,4 @@
+import { OpenPdfService } from './../open-pdf.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GeneralitiesComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private openPdfServ: OpenPdfService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  openPdf(pdf: string) {
+      this.openPdfServ.openPdf(pdf);
   }
 
 }
