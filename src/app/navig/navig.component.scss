@@ -1,6 +1,7 @@
+@use 'src/assets/styles/styles.scss' as *;
 
 .container {
-    background-color: #3b3535;
+    background-color: $bleu-fonce;
     width: 100%;
 }
 .navig {
@@ -27,7 +28,7 @@
 }
 .navig > div > div.liste {
     z-index: 10;
-    background-color: #3b3535;
+    background-color: $bleu-fonce;
     margin-top: 20px;
 }
 .navig > div > div > div {

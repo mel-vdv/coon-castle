@@ -1,9 +1,11 @@
+@use 'src/assets/styles/styles.scss' as *;
+
 .container {
     height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1f1c1c;
+    background-color: $bleu-fonce;
     color: white;
 
     .title {

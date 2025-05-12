@@ -93,7 +93,7 @@ export const listeChats: Chat[] = [
         mere: "sekhmet",
         cattery: "mourre-frais",
         tests: "HCM N/N, PKDEF N/N, SMA N/N",
-        concours: ["Championne LOOF"],
+        concours: "Championne LOOF",
         loof: "LOOF 2023 2542",
         blabla: "bon chacha",
         photos: [
@@ -117,7 +117,7 @@ export const listeChats: Chat[] = [
         poids: [8,"k",2,"a"],
         cattery: "wind of coon",
         tests: "HCM N/N, PKDEF N/N, SMA N/N",
-        concours: ["Grand Champion d'Europe","Second chat de France en 2024","Champion du Monde"],
+        concours: "Grand Champion d'Europe <br> Second chat de France en 2024 <br> Champion du Monde",
         blabla: "Tempérament équilibré. Uragon est à la fois joueur, curieux, doux et calme. Très proche de son frère Tyson, avec lequel il ne se dispute jamais. Il sera papa pour la seconde fois en mai suite à son mariage avec Udaipur de Mourre-frais qui a eu lieu en mars. Fils du célèbre BigBoss, son pedigree est prestigieux.",
         photos: ["uragon-1.jpeg","uragon-2.jpeg", "uragon-3.jpeg", "uragon-4.jpeg","uragon-5.jpeg"]
     }

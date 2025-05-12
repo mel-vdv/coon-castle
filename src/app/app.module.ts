@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
+//COMPONENTS : 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { TitleComponent } from './title/title.component';
@@ -24,6 +24,12 @@ import { ReproductionComponent } from './reproduction/reproduction.component';
 import { PlaceComponent } from './place/place.component';
 import { NavigComponent } from './navig/navig.component';
 import { PubComponent } from './pub/pub.component';
+import { ZoomComponent } from './zoom/zoom.component';
+import { PhiloComponent } from './philo/philo.component';
+import { ChronologieComponent } from './chronologie/chronologie.component';
+import { AdoptantComponent } from './adoptant/adoptant.component';
+import { ChatonsDispoComponent } from './chatons-dispo/chatons-dispo.component';
+import { FichePersoComponent } from './fiche-perso/fiche-perso.component';
 
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -41,14 +47,9 @@ import { environment } from '../environments/environment';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ChatonsDispoComponent } from './chatons-dispo/chatons-dispo.component';
-import { FichePersoComponent } from './fiche-perso/fiche-perso.component';
+//PIPES
 import { TitlecasePipe } from './pipes/titlecase.pipe';
 import { PoidsPipe } from './pipes/poids.pipe';
-import { ZoomComponent } from './zoom/zoom.component';
-import { PhiloComponent } from './philo/philo.component';
-import { ChronologieComponent } from './chronologie/chronologie.component';
-import { AdoptantComponent } from './adoptant/adoptant.component';
 
 @NgModule({
   declarations: [

@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 
 // firebase 
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import firebase from 'firebase/compat/app'; // important sous cette forme
 
 @Injectable({
   providedIn: 'root'

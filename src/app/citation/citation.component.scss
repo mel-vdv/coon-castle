@@ -1,3 +1,5 @@
+@use 'src/assets/styles/styles.scss' as *;
+
 .container {
     color: white;
     background-image: url(/assets/images/fonds/fond-graphique-n&b.jpg);
@@ -12,16 +14,16 @@
 
     .citation {
         width: min(90vw, 700px);
-        background-color: rgb(20,19,19);
+        background-color: $bleu-fonce;
         margin: auto; padding: 20px; box-sizing: border-box;
         border-radius: 20px;
 
         div:first-child {
-            font-family: "Tangerine", cursive;
+            // font-family: "Tangerine", cursive;
             margin-bottom: 20px;
-            font-size: 50px;
+            // font-size: 50px;
             @media screen and (max-width: 700px) {
-                font-size: 30px;
+               // font-size: 30px;
             } 
         }
     }

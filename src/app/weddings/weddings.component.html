@@ -21,7 +21,7 @@
                 <div class="recap">
                     <p>{{ 'ne-le-' + x.sexe | translate }} {{x.anniv}}</p>
                     <p>{{ x.sexe | translate }} {{x.robe}}</p>
-                    <p>{{x.concours}}</p>
+                    <p [innerHTML]="x.concours"></p>
                 </div>
             </div>
         </div>

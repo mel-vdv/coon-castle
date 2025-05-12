@@ -1,35 +1,4 @@
-/*************
-.container {
-    background-image: url(/assets/images/traces.png);
-    background-repeat: repeat;
-    background-size: contain;
-    height: 10vw;
-    position: relative;
-
-    .slogan {
-        font-size: 25px;
-        width: 100%;
-        text-align: center;
-        color: #444343;
-        font-weight: 500;
-        width: 100%;
-        padding-top: 25px;
-    }
-
-    @media screen and (max-width: 700px) {    
-        background-image: url(/assets/images/traces-small.png);
-        height: 36vw;
-        .slogan {
-            position: absolute;
-            font-size: 18px;
-            width: 80%;
-            top: 18%;
-            padding: 0;
-            right: 0;
-        }
-    }
-}
-    *************/
+@use 'src/assets/styles/styles.scss' as *;
     .container {
         background-image: url(/assets/images/fonds/fond-graphique.jpg);
         background-repeat: repeat;
@@ -44,7 +13,7 @@
         .slogan {
             text-align: center;
             width: min(90vw, 700px);
-            background-color: white; color:#363333;
+            background-color: white; color: $bleu-fonce;
             margin: auto;padding: 20px;box-sizing: border-box;
             border-radius: 20px;
             font-size: 23px;

@@ -22,14 +22,15 @@
         display: flex;
         flex-direction: row;
         gap: 50px;
+        width: 100%;
         @media screen and (max-width:700px) {
             flex-direction: column;
             gap: 20px;
         }
         .cadre {
-            background-color: rgb(207,200,200, 0.3);
+            background-color: rgb(255,255,255,0.15);
             border-radius: 10px;
-            box-shadow: 0 0 20px #000;
+            box-shadow: 0 0 20px rgba(40,46,44,0.4);
             width: 50%;
             @media screen and (max-width:700px) {
                 width: 100%;
@@ -92,7 +93,7 @@
                 button {
                     all: unset;
                     padding: 5px 8px;
-                    color: white;//#363333;
+                    color: white;
                     background-color: rgba(0,0,0,0.1);
                     border-radius: 5px;
                     &:hover {
@@ -104,7 +105,7 @@
             }
             .recap {
                 text-align: center;
-                color: rgb(199,188,117);
+                color: white; //rgb(199,188,117);
             }
         }
     }

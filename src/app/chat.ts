@@ -11,7 +11,7 @@ export interface Chat {
     cattery: string;
     tests: string;
     adoptant?: string;
-    concours?: string[];
+    concours?: string;
     loof?: string;
     caractere?: string;
     blabla?:string;

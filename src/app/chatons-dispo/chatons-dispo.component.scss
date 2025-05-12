@@ -65,7 +65,7 @@
         /*****************/
         .filtrage{
             display: flex;
-            background-color: #726e6e;
+            background-color: white; // #726e6e;
             flex-direction: row;
             margin-top: 20px;
 
@@ -130,7 +130,7 @@
             > div {
                 margin: 20px;
                 padding: 20px;
-                background-color: rgb(207,200,200, 0.3);
+                background-color: rgb(255,255,255, 0.15);
                 box-shadow: 0 0 20px rgb(0,0,0);
                 border-radius: 10px;
             }

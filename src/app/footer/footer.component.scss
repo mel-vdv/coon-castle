@@ -1,5 +1,7 @@
+@use 'src/assets/styles/styles.scss' as *;
+
 .container {
-    background-color: rgb(20, 19, 19);
+    background-color: $bleu-fonce;
     width: 100%;
     font-size: 16px;
     text-align: center;
@@ -47,5 +49,4 @@ a {
     margin-bottom: 10px;
 }
 
-/*********************************/
 
