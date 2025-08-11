@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="navig">
+        <div [routerLink]="['/home']"
+        (mouseover)="changeCategHover('')"
+        >{{ 'accueil' | translate }}
+        </div>
+        <div
+        [routerLink]="['/cattery']"
+        (mouseover)="changeCategHover('cattery')"
+        (mouseleave)="changeCategHover('')">
+            {{ 'chatterie' | translate }} 
+            <div *ngIf="categHover === 'cattery'" class="liste">
+                <div (click)="naviguer('/cattery','history')">{{ 'histoire' | translate }}</div>
+                <div (click)="naviguer('/cattery','philo')">{{ 'philo' | translate }}</div>
+                <div (click)="naviguer('/cattery','place')">{{ 'place' | translate }}</div>
+                <div (click)="naviguer('/cattery','uzi')">{{ 'uzi' | translate }}</div>
+                <div (click)="naviguer('/cattery','weddings')">{{ 'mariages' | translate }}</div>
+                <div (click)="naviguer('/cattery','chatons')">{{ 'nos-chatons' | translate }}</div>
+                <div (click)="naviguer('/cattery','selling')">{{ 'vente' | translate }}</div>
+            </div>
+        </div>
+        <div 
+        [routerLink]="['/maine']"
+        (mouseover)="changeCategHover('maine')"
+        (mouseleave)="changeCategHover('')">
+            {{ 'maine' | translate }}
+            <div *ngIf="categHover === 'maine'" class="liste">
+                <div (click)="naviguer('/maine','general')">{{ 'general' | translate }}</div>
+                <div (click)="naviguer('/maine','alim')">{{ 'alim' | translate }}</div>
+                <div (click)="naviguer('/maine','sante')">{{ 'sante' | translate }}</div>
+                <div (click)="naviguer('/maine','repro')">{{ 'repro' | translate }}</div>
+            </div>
+        </div>
+        <div [routerLink]="['/contact']"
+        (mouseover)="changeCategHover('')"
+        >{{ 'contact' | translate }}</div>
+    </div>
+</div>

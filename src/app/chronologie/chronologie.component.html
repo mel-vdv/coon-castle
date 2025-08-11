@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="punchline">Sortez vos agendas! </div>
+    <div class="chrono">
+        <div class="ligne">   
+            <div class="chrono-bout">
+                <div>
+                    {{timing[0]}}
+                </div>
+                <div class="barre">
+                    <div></div>
+                </div>
+                <img src="assets/images/fleche-red.svg" alt="fleche">
+                <div>
+                    <span>{{'saillie-span' | translate }}</span>
+                    {{'saillie' | translate : {chatterie: chatterie} }}
+                </div>
+            </div>
+            <div class="chrono-bout">
+                <div>
+                    {{timing[1]}}
+                </div>
+                <div class="barre">
+                    <div></div>
+                </div>
+                <img src="assets/images/fleche-red.svg" alt="fleche">
+                <div>
+                    <span>{{'naissance-span' | translate }}</span>
+                    {{'naissance' | translate : {n: n} }}
+                </div>
+            </div>
+            <div class="chrono-bout">
+                <div>
+                    {{timing[2]}}
+                </div>
+                <div class="barre">
+                    <div></div>
+                </div>
+                <img src="assets/images/fleche-red.svg" alt="fleche">
+                <div>
+                    <span>{{'depart-span' | translate }}</span>
+                    {{'depart' | translate}}
+                </div>
+            </div>
+        </div>
+
+        <div class="chevron">
+            <img src="assets/images/chevron-red.svg" alt="chevron">
+        </div>
+    </div>
+</div>

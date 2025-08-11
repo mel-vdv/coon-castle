@@ -1,0 +1,144 @@
+<div class="container">
+    <div class="selling">
+        <h1>
+            <img src="assets/images/filigrane-g.png" alt="filigrane"> 
+            {{ "vente" | translate }}
+            <img src="assets/images/filigrane-d.png" alt="filigrane">
+        </h1>
+
+        <div class="destination">
+            <p>Les chatons Maine Coon (mâle comme femelle) de notre élevage sont vendus uniquement en qualité de chat de compagnie.</p>
+            <p class="red">NOUS NE VENDONS AUCUN CHATON EN QUALITÉ DE REPRODUCTEUR.</p>
+        </div>
+        
+        <div class="tarifs">
+            <h2>Voici les tarifs <span (click)="naviguer('/cattery','chatons')">des chatons Maine Coon</span> à la vente au sein de notre chatterie :</h2>
+            <ul>
+                <li>Tarif chaton Maine Coon mâle : à partir de {{tarifM}} € TTC </li>
+                <li>Tarif chaton Maine Coon femelle : à partir de {{tarifF}} € TTC </li>
+            </ul>
+        </div>
+        <div class="criteres">
+            <div class="intro">
+                Quel est le coût d’un Maine Coon ? 
+                <br><br>
+                Cette question revient fréquemment chez ceux qui souhaitent adopter un chaton de cette race.
+                <br>
+                Cependant, il n’existe pas de réponse unique. 
+                <br>
+                En Belgique, comme en France, le prix moyen d’un Maine Coon varie généralement entre 1000 € et 3000 €. 
+                <br><br>
+                Cette large fourchette s’explique par plusieurs facteurs qu’il est important d’examiner en détail.
+                <br>
+                En effet, de nombreux éléments influencent le tarif de ces chats, justifiant ainsi les écarts de prix constatés.
+            </div>
+            <div class="pedigree">
+                <h3>Généalogie et pédigrée : un facteur clé</h3>
+                <p>La généalogie joue un rôle essentiel dans la détermination du prix d’un Maine Coon.
+                    Un chat issu d’une lignée prestigieuse, avec une qualité génétique remarquable, aura naturellement une valeur plus élevée qu’un Maine Coon sans pédigrée.
+                    Un chaton descendant d’un Grand Champion d’Europe ou d’un Champion du Monde sera proposé à un tarif bien supérieur à celui d’un chat sans distinctions.</p>
+                <p>Opter pour un Maine Coon inscrit au LOOF permet d’avoir une traçabilité précise de ses origines et de sa lignée. 
+                    Cela garantit un chat conforme aux standards de la race, tant sur le plan morphologique que comportemental.</p>
+                <p>Chez Coon Castles, nous privilégions le choix de mâle reproducteur dont le palmarès est très étoffé (uragon lien).
+                    Udaipur notre femelle reproductrice est aussi issue d'une lignée très titrée (uzi lien)</p>
+            </div>
+            <div class="elevage">
+                <h3>Excellence et engagement dans l’élevage</h3>
+                <p>L’un des facteurs déterminants dans le prix d’un Maine Coon est la qualité de l’élevage où vous choisissez d’adopter votre chaton. 
+                    Certains élevages privilégient une production intensive, visant à maximiser le nombre de portées et les ventes annuelles, au détriment du bien-être des animaux. 
+                    Chez Coon Castle, nous adoptons une démarche totalement opposée : 
+                    nous mettons un point d’honneur à préserver et sublimer la race du Maine Coon</p>
+                <p>Notre travail repose sur une sélection rigoureuse de nos reproducteurs. 
+                    Le bien-être de nos chats est notre priorité absolue, c’est pourquoi nous limitons volontairement le nombre de portées. 
+                    Plutôt que de chercher la quantité, nous privilégions avant tout la qualité.</p>
+                <p>Un élevage qui néglige les normes d’hygiène, le suivi vétérinaire et les infrastructures peut proposer des prix plus bas. 
+                    Chez Coon Castle, nous appliquons des standards d’hygiène stricts et assurons un suivi médical rigoureux et transparent pour chacun de nos chats. 
+                    Cette exigence engendre des coûts supplémentaires, qui se répercutent naturellement sur le prix final de nos chatons.</p>
+                <p>De plus, adopter un Maine Coon chez Coon Castle, c’est bénéficier d’un accompagnement personnalisé tout au long de la vie de votre compagnon. 
+                    Nous restons à votre disposition pour répondre à toutes vos questions et vous conseiller sur son bien-être et son entretien. 
+                    Un canal privé est également mis en place pour tous nos adoptants, afin de garantir un suivi continu et un échange privilégié. </p>
+            </div>
+            <div class="soins">
+                <div class="alim">
+                    <h3>Alimentation premium</h3>
+                    <div> Concernant la nourriture, chez Coon Castle, nous avons fait le choix d’une alimentation haut de gamme pour nos chats.
+                        Les adultes ont de la viande fraiche crue et des croquettes Royal Canin spécial Maine Coon.
+                        Les chatons ont la version "Kitten" des croquettes Royal Canin spécial Maine Coon.
+                        Là aussi, ces croquettes ont un coût, qui influent donc sur le tarif de vente. 
+                        Mais en contrepartie, vous avez la garantie de faire l’acquisition d’un chaton en très bonne santé, exempt de maladie, et d’avoir un animal qui vous accompagnera durant de nombreuses années.
+                    </div>
+                </div>
+                <div class="veto">
+                    <h3>Soins vétérinaires</h3>
+                    <div>
+                        Les frais de vétérinaire comportent, pour chaque chaton:
+                        <ul>
+                            <li>Les différentes vaccinations contre les maladies les plus courantes (Typhus, Coryza, Leucose, ...)</li>
+                            <li>les traitements vermifuges et anti-parasitaires</li>
+                            <li>La stérilisation / castration</li>
+                            <li>L'implantation de la puce électronique</li>
+                        </ul>
+                        Pour en savoir plus sur la santé : <button (click)="naviguer('/maine','sante')">La santé</button>
+                    </div>
+                </div>
+                <div class="repro">
+                    <h3>Reproduction de qualité</h3>
+                    <div>
+                        Mettre en oeuvre un mariage de qualité a aussi un coût:
+                        <ul>
+                            <li>La saillie, plus onéreuse quand le mâle est titré</li>
+                            <li>Les tests sanguins et ADN</li>
+                            <li>Les examens d'imagerie médicale pendant la gestation</li>
+                            <li>L'alimentation et les soins des nouveaux-nés</li>
+                        </ul>
+                        Pour en savoir plus sur la reproduction : <button (click)="naviguer('/maine','repro')">La reproduction</button>
+                    </div>
+                </div>
+            </div>
+            <div class="age"></div>
+            <div class="robe">
+                <h3>Robe</h3>
+                <div>
+                Certaines robes sont plus populaires que d'autres. <br>
+                De plus, certaines couleurs sont plus rares, ce qui peut influencer leur valeur sur le marché. <br>
+                Il n'est donc pas surprenant que certains pelages, voire une nuance très spécifique, soient vendus à un prix plus élevé.  <br>
+                Les variations de couleur et de motifs, telles que le silver tabby ou le smoke, sont parfois particulièrement recherchées, ce qui peut en faire des spécimens plus onéreux.
+                </div>
+            </div>
+            <div class="autres"></div>
+        </div>
+        <div class="processus">
+            <h2>De la rencontre au départ... Une adoption en toute confiance</h2>
+            <p>Nous attachons une grande importance aux échanges avec nos futurs adoptants et à la rencontre préalable, afin que vous puissiez découvrir l’environnement dans lequel votre chaton a grandi.</p>
+            <p>Nous serons ravis de vous accueillir à la chatterie, uniquement sur rendez-vous et selon nos disponibilités respectives, pour faire connaissance, répondre à vos questions et vous partager nos conseils. 
+                Notre objectif est d’assurer une transition en douceur entre notre foyer et le vôtre, pour que votre chaton Maine Coon s’adapte dans les meilleures conditions.</p>
+            <p>Pour vous permettre de suivre son évolution, nous mettrons régulièrement à jour son album photo sur sa fiche de présentation. 
+                De plus, nous vous enverrons fréquemment des nouvelles et des vidéos, afin de vous faire patienter jusqu’à son arrivée</p>
+            <p>Avant de rejoindre son nouveau foyer, votre chaton sera :</p>
+            <ul style="list-style: none;">
+                <li>✅ Vacciné contre le typhus, le coryza et la chlamydiose (avec un vaccin trivalent)</li>
+                <li>✅ Vacciné contre la rage, si l’adoptant réside à l’étranger</li>
+                <li>✅ Vermifugé et déparasité</li>
+                <li>✅ Pucé</li>
+                <li>✅ Stérilisé si c'est une femelle, castré si c'est un mâle</li>
+            </ul>
+            <p>Sa petite valise contiendra également : </p>
+            <ul>
+                <li>Son certificat de bonne santé, établi par notre vétérinaire</li>
+                <li>Son carnet de santé, avec les vignettes de ses premiers vaccins</li>
+                <li>Son passeport</li>
+                <li>Son pedigree LOOF</li>
+                <li>Un petit coffret de jeux</li>
+                <li>Son petit "doudou" portant l'odeur de sa maman</li>
+            </ul>
+        </div>
+
+        <div class="condVentes">
+            <h2>Modalités de paiement</h2>
+            <p>Lors de la réservation d’un chaton, un dépôt de 30 % du prix, sous forme d’arrhes, est requis. 
+                Ce montant n’est pas remboursable. Le solde devra être réglé intégralement avant le départ du chaton vers son nouveau foyer.
+                </p>
+            <p>Un paiement échelonné est possible, à condition que la totalité du montant soit acquittée avant que le chaton ne quitte la chatterie.</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,85 @@
+<div class="container">
+    <div class="chatons">
+       <!--<h1>{{"nos-chatons" | translate }} Maine Coon</h1>--> 
+        <div class="ventes">
+            <div *ngFor="let chaton of chatons">
+                <div class="name">{{chaton.nom}}</div>
+                <div class="container-photo" (click)="navigate(chaton.nom)">
+                    <img src="assets/images/cadre-sticker.png" alt="cadre">
+                    <img [src]="'assets/images/chats/' + chaton.nom + '/' + chaton.nom + '-main.png'" alt="photo-chat" >
+                </div>
+                <img [src]="'assets/images/tampon-' + chaton.statut + '.png'" alt="tampon">
+                <div class="sexe">{{ chaton.sexe | translate }}</div>
+                <div>{{chaton.robe}}</div>
+                <button (click)="navigate(chaton.nom)">
+                    <img src="assets/images/emprunte-gold.png" alt="emprunte">
+                    {{ 'voir-details' | translate}}
+                </button>
+            </div>
+        </div>
+        <div class="status">
+            Pour organiser les adoptions, nous utilisons 4 statuts :
+            <ul>
+                <li>
+                    <img src="assets/images/tampon-dispo.png" alt="logo-tampon">
+                    <span>{{'dispo' | translate }} :</span>
+                    le chaton est disponible à la vente. Il n'attend que vous pour avoir une nouvelle famille!
+                </li>
+                <li>
+                    <img src="assets/images/tampon-option.png" alt="logo-tampon">
+                    <span>{{'option' | translate }} :</span>
+                    un acheteur, potentiellement intéressé, a posé une option sur le chaton, il sera prioritaire pour en faire l'acquisition
+                </li>
+                <li>
+                    <img src="assets/images/tampon-reserve.png" alt="logo-tampon">
+                    <span>{{'reserve' | translate }} :</span>
+                    le chaton est réservé, il n'est plus disponible à la vente
+                </li>
+                <li>
+                    <img src="assets/images/tampon-eval.png" alt="logo-tampon">
+                    <span>{{'eval' | translate }} :</span>
+                    la chatterie The Coon Castle souhaite observer l'évolution du chaton et éventuellement le garder pour la "relève". Ce chaton peut redevenir disponible
+                </li>
+            </ul>
+
+        </div>
+        <div class="filtrage">
+            <div class="sexes"> 
+                <div (click)="filtrerSexe('m,f')" [class.choisi]="sexe === 'm,f'">
+                    <img src="assets/images/logo-male.svg" alt="logo-sexe"/> + <img src="assets/images/logo-femelle.svg" alt="logo-sexe">
+                </div>
+                <div (click)="filtrerSexe('m')" [class.choisi]="sexe === 'm'">
+                    <img src="assets/images/logo-male.svg" alt="logo-sexe"/>
+                </div>
+                <div (click)="filtrerSexe('f')" [class.choisi]="sexe === 'f'">
+                    <img src="assets/images/logo-femelle.svg" alt="logo-sexe"/>
+                </div>
+            </div>
+            <div class="etats">
+                <div (click)="filtrerEtat('dispo,option,reserve,eval')" [class.choisi]="etat === 'dispo,option,reserve,eval'">
+                    {{"all" | translate }}</div>
+                <div (click)="filtrerEtat('dispo')" [class.choisi]="etat === 'dispo'">
+                    <img src="assets/images/tampon-dispo.png" alt="logo-etat">
+                </div>
+                <div (click)="filtrerEtat('option')" [class.choisi]="etat === 'option'">
+                    <img src="assets/images/tampon-option.png" alt="logo-etat">
+                </div>
+                <div (click)="filtrerEtat('eval')" [class.choisi]="etat === 'eval'">
+                    <img src="assets/images/tampon-eval.png" alt="logo-etat">
+                </div>
+                <div (click)="filtrerEtat('reserve')" [class.choisi]="etat === 'reserve'">
+                    <img src="assets/images/tampon-reserve.png" alt="logo-etat">
+                </div>
+            </div>
+        </div>
+        <div class="speech">
+            De nombreuses photos sont régulièrement ajoutées pour pouvoir suivre l'évolution des chatons au fil de leur développement.
+        </div>
+        <div class="contact">
+            Un coup de coeur ? 
+            <img src="assets/images/fleche-blanc.svg" alt="fleche"> 
+            <div [routerLink]="['/contact']" >{{ 'contactez-nous' | translate }}</div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,80 @@
+.container {
+    width: 100%;
+}
+.repro {
+    width: min(100vw, 1200px);
+    box-sizing: border-box;
+    margin: auto;
+    padding: 20px;
+
+    h3 {
+        color: #363333;
+        font-size: 22px;
+        font-weight: 550;  
+        position: relative;
+        padding-left: 20px;
+
+        &::before {
+
+            content: "";
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background: url('/assets/images/gold-ball.png') no-repeat center;
+            background-size: contain;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    h3, h3 + p, h4, h4 + p {
+        margin: 10px 30px;
+    }
+    h5 {
+        text-decoration: underline;
+    }
+    h5, h5 + p {
+        margin: 10px 60px;
+    }
+    .sexage, .bapteme {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    img[alt='radio'] {
+        max-width: min(100vw, 1200px);
+        display: block;
+        margin-left: -20px;
+    }
+    .pesee {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 100px;
+        img {
+            height: 200px;
+        }
+    }
+    p {
+        text-align: justify;
+    }
+    @media screen and (max-width: 700px) {
+        h3 + p, h4, h4 + p, h5, h5 + p {
+            margin: 10px 0;
+        }
+        ul {
+            padding: 10px;
+        }
+        img[alt="sexage"] {
+            width: 100vw;
+        }
+        .sexage {
+            flex-direction: column;
+        }
+        .pesee {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}

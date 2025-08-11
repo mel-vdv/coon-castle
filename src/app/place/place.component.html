@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="place">
+        <h1>
+            <img src="assets/images/filigrane-g.png" alt="filigrane"> 
+            {{ "place" | translate }}
+            <img src="assets/images/filigrane-d.png" alt="filigrane">
+        </h1>
+   
+        <div class="maps">
+            <div>
+                <h2>Localisation</h2>
+                <p>
+                    Notre chatterie est idéalement située, à seulement 10 minutes en voiture de Bruxelles. 
+                    Nichée à la frontière entre les régions francophone et néerlandophone, elle se trouve à quelques pas des champs.
+                <button>
+                    <a [href]="maps" target="_blank">Voir l'itinéraire</a>
+                </button>
+            </div>
+            <div>
+                <img src="assets/images/maps.png" alt="maps">
+            </div>
+        </div>
+           
+
+        <h2>Un cadre idyllique</h2>
+            <p>
+                Les chats de Coon Castle évoluent librement dans un espace de 220 m² réparti sur les trois étages d’une maison baignée de lumière. 
+                Avec ses quatre volées d’escaliers, deux terrasses, de nombreuses étagères et mezzanines, la maison se transforme en un véritable arbre à chat grandeur nature!
+            </p>
+            <p>
+                Un espace nurserie a été spécialement aménagé pour les nouveaux-nés jusqu’à leurs deux mois révolus. Cette zone est une petite bulle de douceur dans laquelle règnent des règles strictes de sécurité et d’hygiène.
+            </p>
+            <p>
+                Lors des beaux jours, les chats profitent d’un accès au jardin. Un écrin de verdure colorée où ils découvrent senteurs florales, chants d’oiseaux et... insectes. 
+            </p>
+    </div>
+
+    <div class="images-jardin">
+        <img 
+            *ngFor="let i of indices" 
+            [src]="'assets/images/jardin/jardin-'+ i +'.jpeg'" alt="jardin {{i}}">
+    </div>
+
+    <div class="place serre">
+        <div>
+            <p>
+                Bien que proche de Zaventem, le bruit des avions est rare, l’atmosphère y est paisible.
+            </p>
+            <p>
+                Nous disposons également d’une serre, espace intermédiaire idéal entre les parties communes intérieures et le jardin. Un lieu de prédilection pour Udaipur, qui peut y passer des heures sans se lasser!
+            </p>
+        </div>
+        <img src="assets/images/jardin/serre.jpeg" alt="serre">
+    </div>
+</div>

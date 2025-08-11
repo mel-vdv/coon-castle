@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="barre-zoom">
+        <img src="assets/images/close.svg" alt="close" (click)="emitClose()">
+    </div>
+    <div class="zoom">
+        <div class="chevrons">
+            <img src="assets/images/chevron-blanc.svg" alt="chevron" (click)="index = index - 1" *ngIf="index > 0">
+        </div>
+        <div class="main">
+            <img [src]="'assets/images/chats/' + nom + '/' + photos[index]" alt="main">
+        </div>
+        <div class="chevrons">
+            <img src="assets/images/chevron-blanc.svg" alt="chevron-d" (click)="index = index + 1" *ngIf="index < photos.length - 1">
+        </div>
+    </div>
+</div>

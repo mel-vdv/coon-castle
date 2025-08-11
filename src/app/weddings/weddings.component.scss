@@ -1,0 +1,120 @@
+.container {
+    background-image: url(/assets/images/fonds/fond-noir-texturé.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #1f1c1c;
+    font-family: "Karla", sans-serif;
+}
+.weddings {
+    width: min(100vw, 1200px);
+    box-sizing: border-box;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        color: white;
+    }
+
+    .cadres {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        width: 100%;
+        @media screen and (max-width:700px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+        .cadre {
+            background-color: rgb(255,255,255,0.15);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(40,46,44,0.4);
+            width: 50%;
+            @media screen and (max-width:700px) {
+                width: 100%;
+            }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .ecriteau {
+                height: 100px;
+                width: 265px;
+                margin: 20px 0;
+                @media screen and (max-width:700px) {
+                    font-size: 13px;
+                    height: 70px;
+                    width: 185.5px;
+                }
+                background-image: url(/assets/images/ecriteau-long.png);background-repeat: no-repeat;background-size: contain;background-position: center;
+                display: flex;flex-direction: column; align-items: center; justify-content: center;
+                span{
+                    font-weight: bolder;
+                    font-size: 30px;
+                    @media screen and (max-width:700px) {
+                        font-size: 20px;
+                    }
+                }
+            }
+            .container-photo {
+                box-sizing: border-box;
+                margin-bottom: 10px;
+                height: 500px;
+                aspect-ratio: 7.3/10;
+                @media screen and (max-width:700px) {
+                    width: 90%; 
+                    height: auto;
+                    aspect-ratio: 7.3/10;
+                }
+                overflow: hidden;
+                position: relative;
+                display: flex; align-items: center; justify-content: center;
+                img[alt='cadre'] {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                }
+                img[alt='photo-chat']{
+                    height: auto;
+                    width: 85%;
+                    transition: transform 300ms ease-in-out;
+                }
+                &:hover img[alt="photo-chat"] {
+                    transform: scale(1.06);
+                    z-index: 0;
+                }
+            }
+            .voir-details {
+                button {
+                    all: unset;
+                    padding: 5px 8px;
+                    color: white;
+                    background-color: rgba(0,0,0,0.1);
+                    border-radius: 5px;
+                    &:hover {
+                        background-color:#363333;
+                        color: white;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .recap {
+                text-align: center;
+                color: white; //rgb(199,188,117);
+            }
+        }
+    }
+/**************************/
+    img[alt='bagues'] {
+        height: 70px;
+        margin-bottom: 20px;
+        @media screen and (max-width:700px) {
+            height: 40px;
+        }
+    }
+}

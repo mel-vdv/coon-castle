@@ -1,0 +1,46 @@
+@use 'src/assets/styles/styles.scss' as *;
+
+button, input {
+    all: unset;
+    background-color: $rouge;
+    padding: 15px;
+   margin: 10px auto;
+    border: 1px solid $rouge;
+    border-radius: 10px;
+    color: white !important;
+    display: block;
+}
+
+button:hover {
+    background-color: white;
+    color: $rouge !important;
+}
+
+p, button, input {
+    color: $rouge;
+    text-transform: uppercase;
+    font-weight: 550;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
+#x {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+
+    input, button, p {
+        margin: 10px 0;
+        border-radius: 0;
+        text-transform: none;
+    }
+    button {
+        color: $rouge !important;
+        background-color: white;
+    }
+}

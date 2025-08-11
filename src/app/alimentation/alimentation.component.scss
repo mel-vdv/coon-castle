@@ -1,0 +1,26 @@
+.container {
+    width: 100%;
+}
+.alim {
+    width: min(100vw, 1200px);
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+
+    .rc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        img {
+            height: 200px;
+        }
+        @media screen and (max-width:700px) {
+            gap: 10px;
+            img {
+                height: auto;
+                width: 25%;
+            }
+        }
+    }
+}

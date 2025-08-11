@@ -1,0 +1,13 @@
+<div class="container">
+    <!--<p [innerHTML]="'pub-naissances' | translate"></p>-->
+    <p>Nos chatons ne sont plus disponibles...</p>
+    <button *ngIf="!inscr && !message" (click)="inscr = true">S'inscrire sur liste d'attente pour les prochaines portées</button>
+    <div id="x">
+            <input *ngIf="inscr" type="email" name="email" id="email" placeholder="Email" [(ngModel)]="email">
+            <button *ngIf="inscr" (click)="listeattente()">OK</button>
+            <p>{{message}}</p>
+    </div>
+    <app-chatons-dispo></app-chatons-dispo>
+    <app-weddings></app-weddings>
+</div>
+

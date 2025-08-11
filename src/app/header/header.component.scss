@@ -1,0 +1,20 @@
+@use 'src/assets/styles/styles.scss' as *;
+
+.container {
+    background-color: $bleu-fonce;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    height: 40px;
+}
+.reseaux, .langages {
+    display: flex;
+    align-items: center;
+}
+img[alt="reseaux"], img[alt='drapeaux'] {
+    max-height: 30px;
+    max-width: 30px;
+    width: auto;
+    height: auto;
+    margin: 5px;
+}

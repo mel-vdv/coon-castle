@@ -1,0 +1,29 @@
+@use 'src/assets/styles/styles.scss' as *;
+    .container {
+        background-image: url(/assets/images/fonds/fond-graphique.jpg);
+        background-repeat: repeat;
+        background-size: contain;
+        box-sizing: border-box;
+        padding: 30px;
+
+        @media screen and (max-width:700px) {
+            padding: 15px;
+        }
+
+        .slogan {
+            text-align: center;
+            width: min(90vw, 700px);
+            background-color: white; color: $bleu-fonce;
+            margin: auto;padding: 20px;box-sizing: border-box;
+            border-radius: 20px;
+            font-size: 23px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgb(0,0,0);
+            @media screen and (max-width:700px) {
+                font-size: 16px;
+                padding: 15px;
+                box-shadow: 0 0 5px rgb(0,0,0);
+            }
+    
+        }
+    }
