@@ -1,0 +1,77 @@
+@use 'src/assets/styles/styles.scss' as *;
+body {
+    font-family: "Karla", sans-serif;
+    color: $bleu-fonce;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    overflow: auto; /* Permet le défilement */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+::ng-deep h1 {
+  all: unset;
+  color: #363333;
+  text-align: center;
+  font-size: 31px;
+  font-weight: 700;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  @media screen and (max-width: 700px) {
+      font-size: 26px;
+      font-weight: 600;
+      gap: 5px;
+      font-size: 24px;
+  }
+}
+
+::ng-deep h1 img {
+        
+  height: 16px;
+  width: auto;
+  
+  @media screen and (max-width: 700px) {
+      height: 10px;
+  }
+}
+
+::ng-deep h2:not(.h2contact):not(.h2fiche) {  
+  position: relative;
+  padding-left: 30px;
+  font-size: 25px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('/assets/images/gold-ball.png') no-repeat center;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @media screen and (max-width: 700px) {
+      font-size: 22px;
+  }
+}
+
+::ng-deep p {
+  text-align: justify;
+}

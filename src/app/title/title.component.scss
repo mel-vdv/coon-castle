@@ -1,0 +1,55 @@
+@use 'src/assets/styles/styles.scss' as *;
+
+.container {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $bleu-fonce;
+    color: white;
+
+    .title {
+        font-family: "Tangerine", cursive;
+        
+        .chatterie {
+            font-style: italic;
+            font-size: 30px;
+        }
+        .cc {
+            font-size: 80px;
+            font-weight: 700;
+        }
+    }
+    img[alt="gold"] {
+        height: 150px;
+        margin: 0 100px;
+
+        .gauche {
+            transform: scaleX(-1);
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        height: 100px;
+        .title {
+            .chatterie {
+                display: none;
+            }
+            .cc {
+                font-size: 50px;
+            }
+            img[alt='sticker']{
+                display: none;
+            }
+        }
+        img[alt='gold'] {
+            height: 80px;
+            margin: 0;
+        }
+        img.droite {
+            display: none;
+        }
+    }
+}

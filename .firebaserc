@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "default": "coon-castle"
+  },
+  "targets": {},
+  "etags": {
+    "coon-castle": {
+      "extensionInstances": {
+        "firestore-send-email": "29c76220ffa695bcbeb211ca7f24a08fef26f420b5e732e0c054d267729f4f8f"
+      }
+    }
+  }
+}

@@ -1,0 +1,201 @@
+.container {
+    width: 100%;
+    box-sizing: border-box;
+
+    .fiche {
+        width: min(100vw, 1200px);
+        box-sizing: border-box;
+        margin: 0 auto;
+        display: flex;
+        @media screen and(max-width: 700px) {
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .images {
+            width: 50%;
+            @media screen and(max-width: 700px) {
+                width: 90%;
+            }
+
+            height: fit-content;
+            .nom {
+                margin: 10px 0;
+                height: 100px;
+                padding-top: 25px;
+                background-image: url(/assets/images/ecriteau-long.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                span{
+                    font-weight: bolder;
+                    line-height: 45px;
+                    font-size: 30px;
+                }
+                @media screen and(max-width: 700px) {
+                    height: 60px;
+                    padding-top: 10px;
+                    span {
+                        font-size: 20px;
+                        line-height: 25px;
+                    }
+                }
+            }
+            .container-photo {
+                width: 100%;
+                aspect-ratio: 7.3/10;
+                overflow: hidden;
+                position: relative;
+                display: flex; align-items: center; justify-content: center;
+                img[alt='cadre'] {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                }
+                img[alt='photo-chat']{
+                    height: auto;
+                    width: 85%;
+                    transition: transform 300ms ease-in-out;
+                }
+                &:hover img[alt="photo-chat"] {
+                    transform: scale(1.06);
+                    z-index: 0;
+                }
+
+            }
+            .carroussel {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: auto;
+                overflow: hidden;
+
+                img[alt='chevron-g'], img[alt='chevron-d']{
+                    width: 2.5%;
+                    margin: 2.5%;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+                img[alt='chevron-d']{
+                    transform: scaleX(-1) !important;
+                }
+                
+                .miniatures {
+                    margin: 15px 0;
+                    width: 90%;
+                    display: block;
+                    overflow: hidden;
+
+                    .barre-defile {
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        height: 200px;
+                        width: max-content;
+                        @media screen and(max-width: 700px) {
+                            height: 100px;
+                        }
+                        align-items: center;
+                        overflow: visible;
+
+                        .mini {
+                            position: relative;
+                            height: 100%;
+                            overflow: hidden;
+
+                            img[alt='mini'] {
+                                height: 100%;
+                                object-fit: contain;
+                                max-width: 100%;
+                            }
+
+                            img[alt="agrandir"] {
+                                height: 50px;
+                                width: auto;
+                                position: absolute;
+                                top: calc(50% - 25px);
+                                left: calc(50% - 25px);
+                                animation: zoom 1s ease-in-out;
+                                @media screen and(max-width: 700px) {
+                                    height: 25px;
+                                    top: calc(50% - 12.5px);
+                                    left: calc(50% - 12.5px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        /*///////////////////*/
+        .infos {
+        font-size: 22px;
+        width: 50%;
+        height: 400px;
+        padding-left: 50px;
+        @media screen and(max-width: 700px) {
+            width: 90%;
+            height: auto;
+            padding-left: 0;
+        }
+
+            .perso{}
+            .blabla{}
+            .concours{}
+            .dispo{}
+            .parents {
+                img[alt='parent']{
+                    height: 150px;
+                    &:hover {
+                        transform: scale(1.01);
+                    }
+                }
+                .peremere {
+                    display: flex;
+                    & > div{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin: 20px;
+                    }
+                }
+            }
+
+    }
+    }
+}
+/****************************/
+span {
+    font-weight: bold;
+}
+h2 {
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+li {
+    margin: 8px 0;
+}
+em {
+    all: unset;
+}
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.3);
+    }
+}

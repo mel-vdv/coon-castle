@@ -1,0 +1,27 @@
+.container {
+    width: 100%;
+    background-color: rgb(183, 185, 184);
+
+    .uzi {
+        width: min(100vw, 1200px);
+        height: auto;
+        margin: auto;
+        box-sizing: border-box;
+        padding: 20px;font-size: 20px;
+
+        .float {
+            display: flex;
+                
+            img[alt='sticker'] {
+                height: 300px;
+            }
+            @media screen and (max-width: 700px) {
+                flex-direction: column; align-items: center;
+                img[alt='sticker'] {
+                    width: 50vw;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

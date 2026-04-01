@@ -1,0 +1,52 @@
+@use 'src/assets/styles/styles.scss' as *;
+
+.container {
+    background-color: $bleu-fonce;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+
+    .footer {
+        width: min(100vw, 1200px);
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .chatterie, .contact, .liens {
+            width: 33%;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+    }
+    
+    @media  screen and(max-width: 700px) {
+
+        .footer {
+            .chatterie {
+                width: 100%;
+            }
+            .contact, .liens {
+                width: 50%;
+            }
+        }
+    }
+}
+/****************************/
+
+.gris-clair, span {
+    color: gray;
+}
+a {
+    all: unset;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.titre {
+    margin-bottom: 10px;
+}
+
+

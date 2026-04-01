@@ -1,0 +1,41 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "hosting": {
+    "public": "dist/ng-coon-castle",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/home",
+        "destination": "/home/index.html"
+      },
+      {
+        "source": "/cattery",
+        "destination": "/cattery/index.html"
+      },
+      {
+        "source": "/maine",
+        "destination": "/maine/index.html"
+      },
+      {
+        "source": "/contact",
+        "destination": "/contact/index.html"
+      },
+      {
+        "source": "/",
+        "destination": "/index.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "extensions": {}
+}
